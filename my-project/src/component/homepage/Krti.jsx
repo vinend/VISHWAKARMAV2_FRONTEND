@@ -3,7 +3,7 @@ import logoKrti from '../../assets/logoKRTI.png'
 
 const Krti = () => {
   return (
-    <div className='py-[50px] px-[50px] flex flex-row gap-10'>
+    <div className='py-[50px] px-[50px] flex flex-row gap-10 bg-yellow-600'>
         <img src={logoKrti} className='h-[300px] md:flex hidden mx-auto my-auto'/>
         <div className="flex flex-col justify-center md:justify-start md:items-start items-center md:w-[50%]">
             <h1 className='text-[50px] font-bold md:text-start'>KRTI</h1>
