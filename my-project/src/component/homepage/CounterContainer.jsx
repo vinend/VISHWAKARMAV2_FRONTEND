@@ -30,7 +30,7 @@ const CounterContainer = ({ countDownLimit }) => {
   }, [countDownLimit]);
 
   return (
-    <div className="flex justify-center mt-12 lg:mt-12">
+    <div className="flex justify-center mt-12 lg:mt-12 z-10">
       <div className="flex items-center gap-12 lg:gap-8 lg:flex-row 2xl:gap-24">
         <CounterAtom time="Days" timeleft={remainingTime.days} />
         <CounterAtom time="Hrs" timeleft={remainingTime.hours} />
@@ -40,5 +40,6 @@ const CounterContainer = ({ countDownLimit }) => {
     </div>
   );
 };
+
 
 export default CounterContainer;
