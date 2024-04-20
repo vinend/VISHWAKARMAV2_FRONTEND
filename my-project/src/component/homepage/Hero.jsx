@@ -3,7 +3,7 @@ import fighter from '../../assets/fighter.jpg'
 
 const Hero = () => {
   return (
-    <div className='py-[50px] px-[50px] flex flex-row gap-10 bg-yellow-300'>
+    <div className='py-[50px] px-[50px] flex flex-row gap-10 bg-gradient-to-r from-yellow-300 to-yellow-600 w-full'>
         <div className="flex flex-col justify-center md:justify-start md:items-start items-center md:w-[50%] gap-[10px]">
             <h1 className='text-[50px] font-bold md:text-start'>OUR HERO</h1>
             <img src={fighter} className='h-[200px] md:hidden rounded transition-transform duration-300 ease-in-out hover:scale-110'/>

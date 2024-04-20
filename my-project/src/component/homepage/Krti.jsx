@@ -4,7 +4,7 @@ import CounterContainer from './CounterContainer'
 
 const Krti = () => {
   return (
-    <div className='py-[50px] px-[50px] flex flex-row gap-10 bg-yellow-600'>
+    <div className='py-[50px] px-[50px] flex flex-row gap-10 bg-gradient-to-r from-yellow-600 to-yellow-300 w-full'>
         <img src={logoKrti} className='h-[300px] md:flex hidden mx-auto my-auto transition-transform duration-300 ease-in-out hover:scale-110'/>
         <div className="flex flex-col justify-center md:justify-start md:items-start items-center gap-[20px] md:w-[50%]">
             <h1 className='text-[50px] font-bold md:text-start'>KRTI</h1>
