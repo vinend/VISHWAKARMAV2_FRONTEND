@@ -10,7 +10,7 @@ import twitter from '../../assets/twitter.png'
 
 const Navbar = () => {
     return (
-        <nav className='px-[10px] py-[10px] flex flex-row bg-zinc-800 z-[10px] sticky top-0 gap-[20px]'>
+        <nav className='px-[10px] py-[10px] flex flex-row bg-zinc-800 z-[30px] sticky top-0 gap-[20px]'>
             <img src={auav} className='h-[50px]'/>
             <img src={vishmakara} className='h-[50px] md:hidden'/>
             <div className="w-full flex md:justify-start md:flex-row md:gap-[20px] justify-end">

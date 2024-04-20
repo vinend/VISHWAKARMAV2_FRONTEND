@@ -35,7 +35,7 @@ const Footer = () => {
             </p>
             <div className="bg-yellow-400 md:h-[1px] h-[3px] w-full text-[0.5px]"></div>
             <form className='w-full flex flex-col'>
-                <input className='w-full mb-[10px] rounded-sm' placeholder=' Saran dan Masukkan untuk kami'/>
+                <input className='w-full mb-[10px] rounded-sm text-black' placeholder=' Saran dan Masukkan untuk kami'/>
                 <div className="flex md:justify-end justify-center">
                     <button className='bg-white text-zinc-800 px-[10px] hover:outline hover:outline-yellow-400 hover:bg-zinc-800 hover:text-white rounded-sm jut'>SUBMIT</button>
                 </div>
