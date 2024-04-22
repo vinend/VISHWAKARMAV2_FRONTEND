@@ -6,23 +6,27 @@ import Vismakara from './component/homepage/Vismakara'
 import Krti from './component/homepage/Krti'
 import Footer from './component/homepage/Footer'
 import Hero from './component/homepage/Hero'
+import Profile from './component/homepage/Profile'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Navbar/>
-      <Vismakara/>
-      <Krti/>
-      <Hero/>
-      <Footer/>
-      {/* <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1> */}
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Vismakara />
+            <Krti />
+            <Hero />
+            <Footer />
+          </>
+        } />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App
