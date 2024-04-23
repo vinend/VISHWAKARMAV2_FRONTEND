@@ -1,12 +1,8 @@
-import React from 'react'
-import auav from '../../assets/image.png'
-import vishmakara from '../../assets/vtol.png'
-import hiddenMenu from '../../assets/1366x768-269dd16fa1f5ff51accd09e7e1602267.png'
-import location from '../../assets/location.svg'
-import linkedin from '../../assets/linkedin.png'
-import instagram from '../../assets/instagram.png'
-import facebook from '../../assets/facebook.png'
-import twitter from '../../assets/twitter.png'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import auav from '../../assets/image.png';
+import vishmakara from '../../assets/vtol.png';
+import hiddenMenu from '../../assets/1366x768-269dd16fa1f5ff51accd09e7e1602267.png';
 
 const Navbar = () => {
     return (
@@ -27,4 +23,6 @@ const Navbar = () => {
     )
 }
 
-    export default Navbar
+export default Navbar;
+
+

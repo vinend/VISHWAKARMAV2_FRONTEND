@@ -3,3 +3,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Digital-7';
+    src: url('./assets/fonts/Digital-7.ttf') format('truetype');
+}
+
+.glow-on-hover {
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.glow-on-hover:hover {
+    color: #fff; /* Optional: change text color on hover */
+    text-shadow:
+        0 0 5px #fff, /* white glow */
+        0 0 10px #fff, /* more white glow */
+        0 0 15px #f1c40f, /* yellow glow */
+        0 0 20px #f1c40f, /* more yellow glow */
+        0 0 25px #f1c40f, /* even more yellow glow */
+        0 0 30px #f1c40f, /* maximum yellow glow */
+        0 0 35px #f1c40f; /* extreme yellow glow */
+}
+
+
