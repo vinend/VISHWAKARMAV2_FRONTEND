@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
             <div className="flex flex-row gap-[5px] cursor-pointer">
                 <img src={location}/>
-                <a className='text-yellow-400 text-[10px]'>Universitas Indonesia, Depok</a>
+                <a className='text-yellow-400 font-poppins text-[10px]'>Universitas Indonesia, Depok</a>
             </div>
 
         </div>

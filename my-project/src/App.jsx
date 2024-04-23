@@ -1,27 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Navbar from './component/homepage/Navbar'
-import Vismakara from './component/homepage/Vismakara'
-import Krti from './component/homepage/Krti'
-import Footer from './component/homepage/Footer'
-import Hero from './component/homepage/Hero'
+import HomePage from './component/homepage/HomePage'
+import Cont from './component/contatct/Cont'
+import Achieve from './component/achievment/Achieve'
+import Profile from './component/profile/Profile'
 import './App.css'
+import {Route,Routes} from "react-router-dom"
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Navbar/>
-      <Vismakara/>
-      <Krti/>
-      <Hero/>
-      <Footer/>
-      {/* <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1> */}
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/profile" element={<Profile/>}/>
+      <Route path="/achievment" element={<Achieve/>}/>
+      <Route path="/contact" element={<Cont/>}/>
+    </Routes>
   )
 }
 
