@@ -25,17 +25,17 @@ const ImageSlider = () => {
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar/>
-            <div className="flex-grow mb-6 bg-gray-300"> {/* Reduced margin before footer and added grey background */}
+            <div className="flex-grow bg-gray-700" style={{ paddingBottom: '5px' }}>
                 {/* Our Team - remains standard for introduction */}
                 <Section title="OUR TEAM" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={false} />
                 {/* Programming */}
-                <Section title="Programming" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={true} />
+                <Section title="PROGRAMMING" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={true} />
                 {/* Electrical */}
-                <Section title="Electrical" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={false} />
+                <Section title="ELECTRICAL" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={false} />
                 {/* Mechanical */}
-                <Section title="Mechanical" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={true} />
+                <Section title="MECHANICAL" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={true} />
                 {/* Managerial */}
-                <Section title="Managerial" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={false} />
+                <Section title="MANAGERIAL" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={false} />
             </div>
             <Footer/>
         </div>
@@ -43,7 +43,7 @@ const ImageSlider = () => {
 };
 
 const Section = ({ title, index, goToPrevious, goToNext, reverse }) => (
-    <div className={`flex flex-col justify-center items-center bg-gradient-to-r from-yellow-300 to-yellow-600 w-full my-4 border-t-4 border-b-4 border-gray-400`}> {/* Reduced vertical margin and added grey border */}
+    <div className={`flex flex-col justify-center items-center bg-gradient-to-b from-yellow-500 to-yellow-600 w-full my-4 border-t-8 border-b-8 border-yellow-500`}>
         <h1 className='text-[50px] font-bold'>{title}</h1>
         <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
             <div className="flex flex-1 justify-center items-center">
@@ -61,6 +61,9 @@ const Section = ({ title, index, goToPrevious, goToNext, reverse }) => (
 );
 
 export default ImageSlider;
+
+
+
 
 
 
