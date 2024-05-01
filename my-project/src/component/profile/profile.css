@@ -1,0 +1,26 @@
+.gallery-container {
+    position: relative;
+    width: 100%; /* Adjust this width as necessary */
+  }
+  
+  .fixed-button {
+    position: absolute;
+    top: 50%; /* Align vertically */
+    transform: translateY(-50%);
+  }
+  
+  .button-previous {
+    left: 0;
+  }
+  
+  .button-next {
+    right: 0;
+  }
+  
+  .gallery-images {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 100%;
+  }
+  
