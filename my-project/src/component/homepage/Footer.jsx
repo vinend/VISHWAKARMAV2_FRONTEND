@@ -6,6 +6,10 @@ import facebook from '../../assets/facebook.png'
 import twitter from '../../assets/twitter.png'
 
 const Footer = () => {
+    function giveAlert(){
+        alert("Section ini tidak bisa di isi, Harap mengisi pada bagian contact");
+    }
+
   return (
     <footer className=' px-[30px] flex md:flex-row flex-col justify-center md:justify-start md:items-normal bg-zinc-800 text-white py-[20px] md:gap-[20px]'>
         <div className='flex md:justify-start justify-center md:items-start items-center w-full flex-col md:w-[33%] gap-[5px]'>
@@ -37,7 +41,7 @@ const Footer = () => {
             <form className='w-full flex flex-col'>
                 <input className='w-full mb-[10px] rounded-sm text-black' placeholder=' Saran dan Masukkan untuk kami'/>
                 <div className="flex md:justify-end justify-center">
-                    <button className='bg-white text-zinc-800 px-[10px] hover:outline hover:outline-yellow-400 hover:bg-zinc-800 hover:text-white rounded-sm jut'>SUBMIT</button>
+                    <button onClick={giveAlert} className='bg-white text-zinc-800 px-[10px] hover:outline hover:outline-yellow-400 hover:bg-zinc-800 hover:text-white rounded-sm jut'>SUBMIT</button>
                 </div>
             </form>
             <div className="flex flex-row grid-cols-3 gap-[10px]">
