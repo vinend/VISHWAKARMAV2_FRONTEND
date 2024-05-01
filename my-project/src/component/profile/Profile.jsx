@@ -46,9 +46,9 @@ const Section = ({ title, index, goToPrevious, goToNext, reverse }) => (
     <div className={`flex flex-col justify-center items-center bg-gradient-to-b from-yellow-500 to-yellow-600 w-full my-4 border-t-8 border-b-8 border-yellow-500`}>
         <h1 className='text-[50px] font-bold'>{title}</h1>
         <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
-            <div className="flex flex-1 justify-center items-center">
+            <div className="flex flex-1 justify-center items-center" style={{ paddingBottom: '20px' }}> 
                 <button onClick={goToPrevious} className="p-4 bg-gray-800 text-white hover:bg-yellow-600">Previous</button>
-                <img src={images[index]} alt="Gallery" className="max-w-lg mx-4"/>
+                <img src={images[index]} alt="Gallery" className="max-w-lg mx-4" style={{ marginBottom: '20px' }}/> 
                 <button onClick={goToNext} className="p-4 bg-gray-800 text-white hover:bg-yellow-600">Next</button>
             </div>
             <div className="flex-1 p-4">
@@ -59,6 +59,7 @@ const Section = ({ title, index, goToPrevious, goToNext, reverse }) => (
         </div>
     </div>
 );
+
 
 export default ImageSlider;
 
