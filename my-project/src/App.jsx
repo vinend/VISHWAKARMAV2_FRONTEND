@@ -3,6 +3,7 @@ import HomePage from './component/homepage/HomePage'
 import Cont from './component/contatct/Cont'
 import Achieve from './component/achievment/Achieve'
 import Profile from './component/profile/Profile'
+import LandingPage from './component/LandingPage/LandingPage'
 import './App.css'
 import {Route,Routes} from "react-router-dom"
 
@@ -10,7 +11,8 @@ import {Route,Routes} from "react-router-dom"
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage/>}/>
+      <Route path="/" element={<LandingPage/>}/>
+      <Route path="/home" element={<HomePage/>}/>
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/achievment" element={<Achieve/>}/>
       <Route path="/contact" element={<Cont/>}/>

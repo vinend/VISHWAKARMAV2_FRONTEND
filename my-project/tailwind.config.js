@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'poppins':["Poppins"]
+        'poppins':["Poppins"],
+        '7-seg':['7-Seg']
       }
     },
   },

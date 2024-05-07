@@ -5,14 +5,11 @@ import '../../index.css';
 const CounterAtom = ({ time, timeleft, isHidden = false }) => {
   return (
     <div className={`${isHidden && "hidden md:flex"} relative -mt-12 `}>
-      <img src={Atom} height={100} width={100} />
-      <div className="absolute top-1/4 right-[36%]">
-        <p className="font-bold text-center text-base lg:text-2xl" style={{ fontFamily: 'Digital-7' }}>{timeleft}</p>
-        <p className="text-center text-[12px] sm:text-sm" style={{ fontFamily: 'Digital-7' }}>{time}</p>
+      <div className="flex w-[60px] justify-center bg-yellow-600 py-[15px] text-black">
+        <p className="font-bold text-center text-base lg:text-2xl  font-7-seg">{timeleft}</p>
       </div>
     </div>
   );
 };
 
 export default CounterAtom;
-
