@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import HomePage from './component/homepage/HomePage'
 import Cont from './component/contatct/Cont'
-import Achieve from './component/achievment/Achieve'
+import Achieve from './component/achievement/Achieve'
 import Profile from './component/profile/Profile'
 import LandingPage from './component/LandingPage/LandingPage'
 import './App.css'
