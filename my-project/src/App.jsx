@@ -5,6 +5,7 @@ import Achieve from './component/achievement/Achieve'
 import Profile from './component/profile/Profile'
 import LandingPage from './component/LandingPage/LandingPage'
 import './App.css'
+import eventsData from '../src/component/achievement/eventComponents'
 import {Route,Routes} from "react-router-dom"
 
 
@@ -14,7 +15,7 @@ function App() {
       <Route path="/" element={<LandingPage/>}/>
       <Route path="/home" element={<HomePage/>}/>
       <Route path="/profile" element={<Profile/>}/>
-      <Route path="/achievment" element={<Achieve/>}/>
+      <Route path="/achievement" element={<Achieve events={eventsData}/>}/>
       <Route path="/contact" element={<Cont/>}/>
     </Routes>
   )

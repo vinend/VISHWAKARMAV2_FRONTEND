@@ -20,13 +20,13 @@ const Navbar = () => {
                     <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-zinc-800 rounded-xl sidebar absolute top-20 right-0 mx-2 min-w-[140px] flex-col gap-[5px] opacity-[100%]`}>
                         <a className='text-white font-poppins cursor-pointer ' href="/home">Home</a>
                         <a className='text-white font-poppins cursor-pointer ' href="/profile">Profile</a>
-                        <a className='text-white font-poppins cursor-pointer ' href="/achievment">Achievement</a>
+                        <a className='text-white font-poppins cursor-pointer ' href="/achievement">Achievement</a>
                         <a className='text-white font-poppins cursor-pointer ' href="/Contact">Contact</a>
                     </div>
                 </div>
                 <a className='text-white py-[10px] hidden font-poppins cursor-pointer md:block' href="/home">Home</a>
                 <a className='text-white py-[10px] hidden font-poppins cursor-pointer md:block' href="/profile">Profile</a>
-                <a className='text-white py-[10px] hidden font-poppins cursor-pointer md:block' href="/achievment">Achievement</a>
+                <a className='text-white py-[10px] hidden font-poppins cursor-pointer md:block' href="/achievement">Achievement</a>
                 <a className='text-white py-[10px] hidden font-poppins cursor-pointer md:block' href="/Contact">Contact</a>
             </div>
             <img src={vishmakara} className='h-[50px] hidden md:block'/>
