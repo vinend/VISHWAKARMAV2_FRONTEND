@@ -1,21 +1,25 @@
+import fighter from '../../assets/P1100245.jpg'; 
+import team from '../../assets/team.jpg'; 
+import vtol from '../../assets/P1100244.jpg'; 
+
 const events = [
   {
     heading: "Event 1",
     subheading: "Initial Launch",
     direction: "left",
-    image: "path/to/image1.jpg" // Add the path to your image here
+    image: vtol // Add the path to your image here
   },
   {
     heading: "Event 2",
     subheading: "Milestone Reached",
     direction: "right",
-    image: "path/to/image2.jpg"
+    image: team
   },
   {
     heading: "Event 3",
     subheading: "New Features Added",
     direction: "left",
-    image: "path/to/image3.jpg"
+    image: fighter
   },
   {
     heading: "Event 4",
