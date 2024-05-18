@@ -48,11 +48,13 @@ const Pillar = () => (
   <div className='rounded-t-full rounded-b-full w-2 h-full bg-yellow-500 mx-auto'></div>
 );
 
-const EventCard = ({ heading, subheading }) => (
+const EventCard = ({ heading, subheading, image }) => (
   <div className='flex flex-col gap-y-2 border shadow-md rounded-xl p-4'>
+    <img src={image} alt={heading} className='w-full h-32 object-cover rounded-md' /> {/* Display image */}
     <div className='text-grey-800 font-bold text-lg border-b'>{heading}</div>
     <div className='text-sm text-gray-700'>{subheading}</div>
   </div>
 );
 
 export default Achieve;
+
