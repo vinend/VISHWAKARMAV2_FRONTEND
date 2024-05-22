@@ -34,7 +34,7 @@ const ImageSlider = () => {
     };
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen w-screen">
             <Navbar/>
             <div className="flex-grow bg-gray-700" style={{ paddingBottom: '5px' }}>
                 {/* Our Team */}
@@ -90,15 +90,16 @@ const ImageSlider = () => {
 
 const Section = ({ title, images, index, goToPrevious, goToNext, reverse }) => (
     <div className={`flex flex-col justify-center items-center bg-gradient-to-b from-yellow-500 to-yellow-600 w-full my-4 border-t-8 border-b-8 border-yellow-500`}>
-        <h1 className='text-[50px] font-bold'>{title}</h1>
-        <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
+        <h1 className='md:text-[50px] text-[30px] font-bold'>{title}</h1>
+
+        <div className={`flex ${reverse ? 'md:flex-row-reverse flex-col' : 'md:flex-row flex-col'}`}>
             <div className="flex flex-1 justify-center items-center" style={{ paddingBottom: '20px' }}> 
-                <button onClick={goToPrevious} className="p-4 bg-gray-800 text-white hover:bg-yellow-600">Previous</button>
-                <img src={images[index]} alt="Gallery" className="max-w-lg mx-4" style={{ marginBottom: '20px' }}/> 
-                <button onClick={goToNext} className="p-4 bg-gray-800 text-white hover:bg-yellow-600">Next</button>
+                <button onClick={goToPrevious} className="md:p-4 py-4 px-2 bg-gray-800 text-white hover:bg-yellow-600 text-center">{"<"}</button>
+                <img src={images[index]} alt="Gallery" className="md:w-[520px] w-[260px] mx-4" style={{ marginBottom: '20px' }}/> 
+                <button onClick={goToNext} className="md:p-4 py-4 px-2 bg-gray-800 text-white hover:bg-yellow-600 text-center">{">"}</button>
             </div>
-            <div className="flex-1 p-4">
-                <p className='text-center font-poppins md:text-start text-[20px]'>
+            <div className="flex-1 px-[20px]">
+                <p className='text-justify font-poppins md:text-start text-[20px]'>
                 Meet our beloved members! Each team member brings a unique blend of passion, expertise, and creativity, striving to redefine the boundaries of aerial vehicle engineering. From participating in cutting-edge competitions to engaging in transformative projects, Vishwakarma represents the pinnacle of commitment and excellence in aviation technology. Dive into the profiles of these trailblazers who are not just designing machines, but are crafting the future of flight.
                 </p>
             </div>

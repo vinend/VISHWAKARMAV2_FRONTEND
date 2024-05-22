@@ -2,10 +2,13 @@ import React, { Fragment } from 'react';
 import eventsData from './eventComponents'; // Assuming this import brings the events data
 import Navbar from '../homepage/Navbar';
 import Footer from '../homepage/Footer';
+import bgContactSmall from '../../assets/17148025170861.jpg'
+
+
 
 const Achieve = ({ events }) => {
   return (
-    <div className='flex flex-col min-h-screen'> {/* Ensure full screen height and flex column layout */}
+    <div className={`flex flex-col bg-cover bg-no-repeat min-h-screen`} style={{ backgroundImage: `url(${bgContactSmall})`}}> {/* Ensure full screen height and flex column layout */}
       <Navbar />
 
       <div className='flex-grow flex flex-col gap-y-3 my-4 overflow-auto'> {/* Container for scrolling content */}
@@ -49,7 +52,7 @@ const Pillar = () => (
 );
 
 const EventCard = ({ heading, subheading, image }) => (
-  <div className='flex flex-col gap-y-2 border shadow-md rounded-xl p-4'>
+  <div className='flex flex-col bg-white gap-y-2 border shadow-md rounded-xl p-4'>
     <img src={image} alt={heading} className='w-full h-32 object-cover rounded-md' /> {/* Display image */}
     <div className='text-grey-800 font-bold text-lg border-b'>{heading}</div>
     <div className='text-sm text-gray-700'>{subheading}</div>
