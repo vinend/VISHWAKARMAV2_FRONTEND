@@ -5,44 +5,90 @@ import vtol from '../../assets/P1100244.jpg';
 import Navbar from '../homepage/Navbar';
 import Footer from '../homepage/Footer';
 
-const images = [fighter, team, vtol];
+// Define separate image arrays for each section
+const teamImages = [fighter, team, vtol];
+const programmingImages = [vtol, team, fighter];
+const electricalImages = [team, vtol, fighter];
+const mechanicalImages = [fighter, vtol, team];
+const managerialImages = [vtol, fighter, team];
 
 const ImageSlider = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    // Create a state for each section's current image index
+    const [teamIndex, setTeamIndex] = useState(0);
+    const [programmingIndex, setProgrammingIndex] = useState(0);
+    const [electricalIndex, setElectricalIndex] = useState(0);
+    const [mechanicalIndex, setMechanicalIndex] = useState(0);
+    const [managerialIndex, setManagerialIndex] = useState(0);
 
-    const goToPrevious = () => {
-        const isFirstImage = currentIndex === 0;
-        const newIndex = isFirstImage ? images.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex);
+    // Define the handlers for each section
+    const goToPrevious = (index, setIndex, images) => {
+        const isFirstImage = index === 0;
+        const newIndex = isFirstImage ? images.length - 1 : index - 1;
+        setIndex(newIndex);
     };
 
-    const goToNext = () => {
-        const isLastImage = currentIndex === images.length - 1;
-        const newIndex = isLastImage ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex);
+    const goToNext = (index, setIndex, images) => {
+        const isLastImage = index === images.length - 1;
+        const newIndex = isLastImage ? 0 : index + 1;
+        setIndex(newIndex);
     };
 
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar/>
             <div className="flex-grow bg-gray-700" style={{ paddingBottom: '5px' }}>
-                {/* Our Team - remains standard for introduction */}
-                <Section title="OUR TEAM" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={false} />
+                {/* Our Team */}
+                <Section 
+                    title="OUR TEAM" 
+                    images={teamImages} 
+                    index={teamIndex} 
+                    goToPrevious={() => goToPrevious(teamIndex, setTeamIndex, teamImages)} 
+                    goToNext={() => goToNext(teamIndex, setTeamIndex, teamImages)} 
+                    reverse={false} 
+                />
                 {/* Programming */}
-                <Section title="PROGRAMMING" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={true} />
+                <Section 
+                    title="PROGRAMMING" 
+                    images={programmingImages} 
+                    index={programmingIndex} 
+                    goToPrevious={() => goToPrevious(programmingIndex, setProgrammingIndex, programmingImages)} 
+                    goToNext={() => goToNext(programmingIndex, setProgrammingIndex, programmingImages)} 
+                    reverse={true} 
+                />
                 {/* Electrical */}
-                <Section title="ELECTRICAL" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={false} />
+                <Section 
+                    title="ELECTRICAL" 
+                    images={electricalImages} 
+                    index={electricalIndex} 
+                    goToPrevious={() => goToPrevious(electricalIndex, setElectricalIndex, electricalImages)} 
+                    goToNext={() => goToNext(electricalIndex, setElectricalIndex, electricalImages)} 
+                    reverse={false} 
+                />
                 {/* Mechanical */}
-                <Section title="MECHANICAL" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={true} />
+                <Section 
+                    title="MECHANICAL" 
+                    images={mechanicalImages} 
+                    index={mechanicalIndex} 
+                    goToPrevious={() => goToPrevious(mechanicalIndex, setMechanicalIndex, mechanicalImages)} 
+                    goToNext={() => goToNext(mechanicalIndex, setMechanicalIndex, mechanicalImages)} 
+                    reverse={true} 
+                />
                 {/* Managerial */}
-                <Section title="MANAGERIAL" index={currentIndex} goToPrevious={goToPrevious} goToNext={goToNext} reverse={false} />
+                <Section 
+                    title="MANAGERIAL" 
+                    images={managerialImages} 
+                    index={managerialIndex} 
+                    goToPrevious={() => goToPrevious(managerialIndex, setManagerialIndex, managerialImages)} 
+                    goToNext={() => goToNext(managerialIndex, setManagerialIndex, managerialImages)} 
+                    reverse={false} 
+                />
             </div>
             <Footer/>
         </div>
     );
 };
 
-const Section = ({ title, index, goToPrevious, goToNext, reverse }) => (
+const Section = ({ title, images, index, goToPrevious, goToNext, reverse }) => (
     <div className={`flex flex-col justify-center items-center bg-gradient-to-b from-yellow-500 to-yellow-600 w-full my-4 border-t-8 border-b-8 border-yellow-500`}>
         <h1 className='text-[50px] font-bold'>{title}</h1>
         <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
@@ -59,7 +105,6 @@ const Section = ({ title, index, goToPrevious, goToNext, reverse }) => (
         </div>
     </div>
 );
-
 
 export default ImageSlider;
 
