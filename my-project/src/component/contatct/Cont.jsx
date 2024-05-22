@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import linkedin from '../../assets/linkedin.png'
 import instagram from '../../assets/instagram.png'
 import facebook from '../../assets/facebook.png'
@@ -13,8 +13,17 @@ const Cont = () => {
     let isMessageValid = false;
     const [messageLength, setMessageLength] = useState(0);
     const [messageValue, setMessageValue] = useState("");
-    const backgroundImage = window.innerWidth >= 768 ? bgContact : bgContactSmall;
+    const [backgroundImage, setBackgroundImage] = useState(window.innerWidth >= 768 ? bgContact : bgContactSmall);
 
+    useEffect(() => {
+        const handleResize = () => {
+            setBackgroundImage(window.innerWidth >= 768 ? bgContact : bgContactSmall);
+        };
+        window.addEventListener('resize', handleResize);
+  
+    }, []);
+    
+    
     function submitForm() {
         isMessageValid = messageLength >= 20 && messageLength <= 540;
         if (isMessageValid == true) {

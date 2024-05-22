@@ -10,8 +10,8 @@ const Navbar = () => {
 
     return (
         <nav className='px-[10px] py-[10px] flex flex-row bg-zinc-800 z-[30] sticky top-0 gap-[20px]'>
-            <a href="/" className='h-[50px]'>
-                <img src={auav} className='h-full'/>
+            <a href="/" className='h-[50px] w-[60px]'>
+                <img src={auav} className='h-[50px]'/>
             </a>
             <img src={vishmakara} className='h-[50px] md:hidden'/>
             <div className="w-full flex md:justify-start md:flex-row md:gap-[20px] justify-end">
