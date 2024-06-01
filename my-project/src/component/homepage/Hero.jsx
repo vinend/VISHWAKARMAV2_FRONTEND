@@ -8,7 +8,7 @@ const Hero = () => {
         <div className='text-center md:text-left w-full'>
           <h1 className='text-[40px] font-bold text-center'>OUR HERO</h1>
           <p className='text-center md:text-justify text-[16px] rounded-xl p-4 bg-yellow-200 bg-opacity-80 mt-4'>
-            Vishwakarma is a team from the University of Indonesia specializing in VTOL (Vertical Take-Off and Landing) technology. They are dedicated to advancing and innovating in the field of aerial vehicles. The team consists of passionate and motivated individuals who strive to push the boundaries of aviation engineering. We actively participate in various competitions and projects, showcasing their expertise and technical skills. Our commitment to excellence and continuous learning makes them a valuable asset in the field of aviation technology.
+          Explore the future of aerial technology with the ADRG VTOL Team from the University of Indonesia. Our state-of-the-art drone, equipped with the powerful Jetson Xavier, delivers unmatched performance and precision. Revolutionizing the skies with advanced AI capabilities, robust design, and unparalleled efficiency, this drone is set to redefine aerial solutions. Join us in pioneering innovation and excellence in vertical takeoff and landing technology.
           </p>
         </div>
         <img src={fighter} className='h-[200px] md:hidden rounded-full transition-transform duration-300 ease-in-out hover:scale-110' />

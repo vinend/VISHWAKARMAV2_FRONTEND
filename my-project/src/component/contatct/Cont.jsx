@@ -44,7 +44,7 @@ const Cont = () => {
       <Navbar/>
       <div className='h-fit  flex items-center justify-top flex-col bg-no-repeat bg-cover py-[30px] gap-[40px]' style={{backgroundImage: `url(${backgroundImage})`}}>
         <div className='py-[30px] md:py-[60px] px-[50px] flex h-fit md:w-[50%] w-[75%] items-center justify-center flex-col gap-[20px] bg-yellow-500 rounded-xl'>
-          <p className='text-zinc-700 text-4xl md:text-6xl font-bold md:mb-[50px] text-center'>
+          <p className='text-black text-4xl md:text-6xl font-bold md:mb-[50px] text-center'>
             CONTACT US
           </p>
           
@@ -57,24 +57,26 @@ const Cont = () => {
 
           </div>
           <div className='py-[20px] px-[50px] flex h-fit md:w-[50%] w-[75%] items-center justify-center flex-col gap-[20px] bg-yellow-500 rounded-xl'>
-            <p className='text-zinc-700 text-4xl md:text-6xl font-bold mb-[20px] text-center'>
+            <p className='text-black text-4xl md:text-6xl font-bold mb-[20px] text-center'>
               Contact Person
             </p>
             
             <div className="flex flex-col grid-cols-3 gap-[20px] w-full">
               <div className=" flex justify-between ">
-                <p className='text-start'>Nuzul</p>
-                <p className='text-end'> 089712</p>
+                <p className='text-start'>Farhan Nuzul Noufendri</p>
+                <p className='text-end'> 082375688095</p>
+                <p className='text-end'> farhannuzul11@gmail.com</p>
               </div>
               <div className=" flex justify-between ">
-                <p className='text-start'>Nuzul</p>
-                <p className='text-end'> 089712</p>
+                <p className='text-start'>Azriel Dimas Ash-Shidiqi</p>
+                <p className='text-end'> 082116685115</p>
+                <p className='text-end'> dimasazriel45@gmail.com</p>
               </div>
               
           </div>
         </div>
         <div className="py-[20px] px-[50px] flex h-fit w-[75%] md:w-[50%] items-center justify-center flex-col gap-[20px] bg-yellow-500 rounded-xl">
-            <p className='text-zinc-700 text-4xl md:text-6xl font-bold mb-[20px] text-center'>
+            <p className='text-black text-4xl md:text-6xl font-bold mb-[20px] text-center'>
               Social Media
             </p>
             <div className="flex flex-row grid-cols-3 gap-[20px] md:gap-[50px]">

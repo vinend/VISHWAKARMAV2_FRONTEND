@@ -4,44 +4,44 @@ import vtol from '../../assets/P1100244.jpg';
 
 const events = [
   {
-    heading: "Event 1",
-    subheading: "Initial Launch",
+    heading: "2015",
+    subheading: "1st Place - Garuda - 2015 Indonesian Flying Robot Contest",
     direction: "left",
     image: vtol // Add the path to your image here
   },
   {
-    heading: "Event 2",
-    subheading: "Milestone Reached",
+    heading: "2016",
+    subheading: "1st Place - 2016 Indonesian Flying Robot Contest",
     direction: "right",
     image: team
   },
   {
-    heading: "Event 3",
-    subheading: "New Features Added",
+    heading: "2017",
+    subheading: "Favorite Winner - 2017 Indonesian Flying Robot Contest",
     direction: "left",
     image: fighter
   },
   {
-    heading: "Event 4",
-    subheading: "New Partners Joined",
+    heading: "2018",
+    subheading: "Favorite Winner - 2018 Indonesian Flying Robot Contest",
     direction: "right",
     image: "path/to/image4.jpg"
   },
   {
-    heading: "Event 5",
-    subheading: "Major Update Released",
+    heading: "2019",
+    subheading: "Semi Final - 2019 Indonesian Flying Robot Contest",
     direction: "left",
     image: "path/to/image5.jpg"
   },
   {
-    heading: "Event 6",
-    subheading: "Funding Secured",
+    heading: "2021",
+    subheading: "16th Final - Indonesian Flying Robot Contest",
     direction: "right",
     image: "path/to/image6.jpg"
   },
   {
     heading: "Event 7",
-    subheading: "Expansion Announced",
+    subheading: "Finalist - Indonesian Flying Robot Contest",
     direction: "left",
     image: "path/to/image7.jpg"
   }
