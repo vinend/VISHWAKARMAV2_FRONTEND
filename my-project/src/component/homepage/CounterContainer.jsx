@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import CounterAtom from "./CounterAtom";
 
-// Misalnya, fungsi ini menghitung waktu yang tersisa dari sekarang hingga countDownLimit
-function getRemainingTime(countDownLimit) {
-  const newYearDate = new Date("2024-11-21");
-  const totalSeconds = Math.floor((newYearDate.getTime() - Date.now()) / 1000);
+function getRemainingTime() {
+  const targetDate = new Date("2024-11-21");
+  const totalSeconds = Math.floor((targetDate.getTime() - Date.now()) / 1000);
   const days = Math.floor(totalSeconds / (60 * 60 * 24));
   const hours = Math.floor((totalSeconds / (60 * 60)) % 24);
   const minutes = Math.floor((totalSeconds / 60) % 60);
@@ -18,29 +17,28 @@ function getRemainingTime(countDownLimit) {
   };
 }
 
-const CounterContainer = ({ countDownLimit }) => {
-  const [remainingTime, setRemainingTime] = useState(getRemainingTime(countDownLimit));
+const CounterContainer = () => {
+  const [remainingTime, setRemainingTime] = useState(getRemainingTime());
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setRemainingTime(getRemainingTime(countDownLimit));
+      setRemainingTime(getRemainingTime());
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [countDownLimit]);
+  }, []);
 
   return (
-    <div className="flex justify-center flex-col w-full gap-[30px] z-0 mt-12 ">
-      <p className="text-center font-bold">SEE US IN KRTI YOGYAKARTA 2024</p>
-      <div className="flex items-center justify-center w-full gap-[20px] mt-12 ">
-        <CounterAtom time="Days" timeleft={remainingTime.days} />
-        <CounterAtom time="Hrs" timeleft={remainingTime.hours} />
-        <CounterAtom time="Mins" timeleft={remainingTime.minutes} />
-        <CounterAtom time="Secs" isHidden={false} timeleft={remainingTime.seconds} />
+    <div className="flex flex-col items-center w-full gap-8 mt-12">
+      <p className="text-center font-bold text-2xl mb-4">SEE US IN KRTI YOGYAKARTA 2024</p>
+      <div className="flex items-center justify-center w-full gap-4">
+        <CounterAtom label="Days" value={remainingTime.days} />
+        <CounterAtom label="Hrs" value={remainingTime.hours} />
+        <CounterAtom label="Mins" value={remainingTime.minutes} />
+        <CounterAtom label="Secs" value={remainingTime.seconds} />
       </div>
     </div>
   );
 };
-
 
 export default CounterContainer;
